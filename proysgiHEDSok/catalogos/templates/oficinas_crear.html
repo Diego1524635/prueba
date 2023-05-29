@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Crear nueva Oficina{% endblock%}
+
+{% block contenido %}
+    <form action="" method="post">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <button type="submit" class="btn btn-danger">Guardar</button>
+       <a href="{% url 'oficinasView' %}" class="btn btn-success">Cancelar</a>
+    </form>
+{% endblock %}
